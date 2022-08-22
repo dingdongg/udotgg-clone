@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useState } from "react";
 import axios from 'axios';
@@ -185,7 +184,6 @@ function App() {
 :
 
 <><p>No player Data</p></> }
-
     </div>
   )}
 
