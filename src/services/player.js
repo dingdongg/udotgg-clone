@@ -1,12 +1,15 @@
 import axios from "axios";
 
-const searchByNameUrl ='https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/';
+const searchByNameUrl = 'https://stormy-caverns-66892.herokuapp.com/api/players/';
 
 const get = (name) => {
-    let url = `${searchByNameUrl}${name}?api_key=${process.env.API_KEY}`;
+    let url = `${searchByNameUrl}${name}`;
 
-    axios.get(url)
+    console.log('URL', url);
+
+    axios.get(url, { mode: 'cors' })
         .then(response => {
+            console.log(response.data);
             return response.data;
         })
         .catch(error => console.error(error));
