@@ -9,7 +9,7 @@ const TopbarDefault = () =>{
                     <FaBars/>
                 </div>
             <div className ="logo">
-                <img src ={ugglogo} width="128px"height="48px"></img>
+                <img src ={ugglogo} width="128px"height="48px" alt="u.gg logo"></img>
             </div>
             </div>
        </div>

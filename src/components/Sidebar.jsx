@@ -3,13 +3,13 @@ import React from 'react';
 const Sidebar = () =>{
     return (
         <div className="sidebar">
-            <div class="tierlist">
+            <div className="tierlist">
                 Live Game
             </div>
-            <div class="champion">
+            <div className="champion">
                 MultiSearch
             </div>
-            <div class="items">
+            <div className="items">
                 Champions
             </div>
         </div> 
