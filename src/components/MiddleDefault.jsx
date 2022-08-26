@@ -4,11 +4,15 @@ import logo from '../icons/UGG_Logo_Blue_3.svg'
 import {FaWindows,FaSearch} from "react-icons/fa";
 
 
-const MiddleDefault = () =>{
+const MiddleDefault = ({searchForPlayer, setSearchText}) =>{
     return (
         <div className="middle-area">
-            <form >
-                <input type="text" className="search" placeholder="Search Yourself or a Champion " />
+            <form onSubmit={searchForPlayer}>
+                <input 
+                    type="text" 
+                    className="search" 
+                    placeholder="Search Yourself or a Champion "
+                    onChange={({ target }) => setSearchText(target.value)} />
                 <button type='submit' > <FaSearch/> </button>
             </form>
             <img src={logo} className='logoMiddle' alt="logo" width="245px" height="86"></img>

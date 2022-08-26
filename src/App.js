@@ -24,10 +24,8 @@ function App() {
     event.preventDefault();
     playerQueryService.get(searchText)
       .then(response => {
-        console.log('playerData', playerData);
         setPlayerData(response.data);
         printIconByRank(response.data.id);
-        console.log(response.data);
       })
       .catch(e => console.error(e));
   }
@@ -43,7 +41,6 @@ function App() {
         });
         
         if (soloQueue[0]) {
-          console.log(soloQueue);
           setPlayerRank(soloQueue[0].tier);
         } else {
           setPlayerRank("UNRANKED");
@@ -54,9 +51,9 @@ function App() {
 
   return (
     <div className='container'>
-      <TopbarDefault/>
-      <Sidebar/>
-      <MiddleDefault/>
+      <TopbarDefault />
+      <Sidebar />
+      <MiddleDefault searchForPlayer={searchForPlayer} setSearchText={setSearchText} />
     </div>
   )
 }
