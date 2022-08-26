@@ -7,37 +7,17 @@ import "@fontsource/barlow";
 const MiddleDefault = () =>{
     return (
         <div className="middle-area">
-
-
-       <form >
- <input type="text" className="search" placeholder="Search Yourself or a Champion " />
-       
-        <button type='submit' > <FaSearch/> </button>
-        
-        
-       </form>
-       
-       
-        
-
-       
-
-        
-        < img src={logo} className='logoMiddle' alt="logo" width="245px" height="86"></img>
-        <h1 >THE APP IS HERE.</h1>
-        <button type='button' > <FaWindows/> Download Now</button>
-        
-       
-      
-        
-
-        <video autoPlay loop muted className='video-area'>
-         <source type="video/webm" src={video}/>
-        </video>
-
-        
-     </div>
-        
+            <form >
+                <input type="text" className="search" placeholder="Search Yourself or a Champion " />
+                <button type='submit' > <FaSearch/> </button>
+            </form>
+            <img src={logo} className='logoMiddle' alt="logo" width="245px" height="86"></img>
+            <h1>THE APP IS HERE.</h1>
+            <button type='button' > <FaWindows/> Download Now</button>
+            <video autoPlay loop muted className='video-area'>
+                <source type="video/webm" src={video}/>
+            </video>
+        </div>
     )
 
 };
