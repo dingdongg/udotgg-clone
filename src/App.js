@@ -2,6 +2,9 @@ import './App.css';
 import React, { useState } from "react";
 import playerQueryService from './services/player';
 import summonerService from './services/summoner';
+import Sidebar from './components/Sidebar';
+import TopbarDefault from './components/TopBarDefault';
+import MiddleDefault from './components/MiddleDefault';
 
 const reqImages = require.context('./images/rank_icons/', true, /\.png$/);
 const paths = reqImages.keys();
@@ -50,22 +53,10 @@ function App() {
    }
 
   return (
-    <div className="App">
-      <div className= "container">
-        <h5>League of Legends Player Searcher</h5>
-        <form onSubmit={(e) => searchForPlayer(e)}>
-          <input type = "text" onChange={e => setSearchText(e.target.value)}>
-          </input>
-          <button type='submit'>Search For Player</button>
-        </form>
-      </div>
-      {((!playerData.name) ? 
-          '' : 
-          <div>
-            <p>{playerData.name}, level {playerData.summonerLevel}</p>
-            <img src={icons[playerRank]} alt={playerRank} />
-            <img src={"http://ddragon.leagueoflegends.com/cdn/12.15.1/img/profileicon/"+ playerData.profileIconId +".png"} alt="player icon" />
-          </div>)}
+    <div className='container'>
+      <TopbarDefault/>
+      <Sidebar/>
+      <MiddleDefault/>
     </div>
   )
 }
