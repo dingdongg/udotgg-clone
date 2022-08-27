@@ -2,7 +2,7 @@ import React from 'react';
 import video from '../videos/ugg-app-landing.webm'
 import logo from '../icons/UGG_Logo_Blue_3.svg'
 import {FaWindows,FaSearch} from "react-icons/fa";
-import "@fontsource/barlow";
+import "@fontsource/barlow"; 
 
 const MiddleDefault = ({searchForPlayer, setSearchText}) =>{
     return (
