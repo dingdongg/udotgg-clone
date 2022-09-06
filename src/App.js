@@ -58,7 +58,7 @@ function App() {
     matchIdService.get(puuid)
       .then(({data}) => {
         console.log(data)
-        // getMatchHistoryData(data[0])
+      
         for (let i = 0; i <data.length; i++){
           getMatchHistoryData(data[i])
         }
@@ -98,12 +98,7 @@ function App() {
         
    }
 
-   function displayHistory (){
-  //  matchHistoryArr.forEach( winOrLose => {
-  //   console.log(winOrLose)
-  //  })
-  console.log(matchHistoryArr)
-   }
+   
 
   return (
     <div className="App">
